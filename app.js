@@ -56,6 +56,15 @@
 // Task # 6
 
 
+// ====================================================================
+
+// var firstName = prompt("Please enter your first name");
+// var lastName = prompt("Please enter your last name");
+// var fullName = firstName.concat(" " + lastName); 
+// document.write(fullName)
+
+
+// ====================================================================
 
 
 
@@ -120,14 +129,13 @@
 
 // Task # 12
 
-// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-// var num = 35.36;
-// var num2 = num.toString();
-// console.log(num);
-// console.log(num2);
-// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-
+// var  num = 35.36;
+// var num1 = 35;
+// var num2 = 36;
+// // var numasstring = num.toString();
+// var numasstring1 = num1.toString();
+// var numasstring2 = num2.toString();
+// document.write("Number:" + num+"<br>" + "Result:" + " " +num1+num2)
 
 
 
@@ -232,6 +240,150 @@
 // document.write("<h2>Task # 18</h2>")
 // document.write("Text: " + textString + "<br>There are "+ count + " occurence(s) of the word 'the' ")
 
+
+
+
+
+
+
+
+
+
+
+// ================================
+// // CHAPTER # 21-25 MATHS MEHTODS
+// ================================
+
+
+
+
+
+
+
+
+
+
+// Task # 1
+
+
+// var positiveInt = prompt("Enter Positive integer number: ");
+// var roundOff = Math.round(positiveInt);
+// var floorValue = Math.floor(positiveInt);
+// var ceilValue = Math.ceil(positiveInt);
+// document.write("<h2>Task # 1</h2>")
+
+// document.write("Number: " + positiveInt + " <br>round off value: " + roundOff +" <br>Floor value: " + floorValue + " <br>Ceil value: " + ceilValue);
+
+
+
+
+
+// Task # 2
+
+// var negativeInt = prompt("Enter negative integar number: ");
+// var roundOff = Math.round(negativeInt);
+// var floorValue = Math.floor(negativeInt);
+// var ceilValue = Math.ceil(negativeInt);
+// document.write("<h2>Task # 2</h2>")
+
+// document.write("Number: " + negativeInt + " <br>round off value: " + roundOff +" <br>Floor value: " + floorValue + " <br>Ceil value: " + ceilValue);
+
+
+
+
+
+// Task # 3
+
+// function absValue(number){
+//     if (number < 0 ){
+//         return -number
+//     }
+//     else {
+//         return number
+//     }
+// }
+
+// document.write("<h1>Task # 3</h1>")
+// document.write("The absolute value of 5 is: "+absValue(5))
+
+
+
+
+
+
+// Task # 4
+
+// var bigDecimal = Math.random();
+// var improvedNum = (bigDecimal * 6) + 1;
+// var improvedNum1 = (bigDecimal * 9) + 1;
+// var numberOfStars = Math.floor(improvedNum);
+// var numberOfStars1 = Math.floor(improvedNum1);
+
+// document.write("<h1>Task # 4</h1>")
+// document.write("random dice value is" + " " +numberOfStars+ "<br>")
+// document.write("random dice value is" + " " +numberOfStars1)
+
+
+
+
+
+
+// Task # 5
+
+// var heads = prompt("Enter Heads Username");
+// var tails = prompt("Enter Tails Username");
+// var toss = Math.random() * 2;
+// var floor = Math.floor(toss)
+// if (floor === 2) {
+//     alert("random coin value: " + heads )
+// }
+// else {
+//     alert("random coin value: " + tails )
+// }
+
+
+
+
+
+
+// Task # 6
+
+// var num = Math.random()*100;
+// var fixed = num.toFixed(0)
+
+// document.write("<h1>Task # 6</h1>")
+// document.write(num)
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------
+
+
+// Task # 7
+
+// var a = 50;
+// var return = parseInt("a");
+// document.write(return);
+
+// var a = prompt("enter your weight in kilograms");
+// document.write(parseInt("The weight of user is" + " " + "a" )+"<br>");
+
+
+// document.write(parseInt("50")+"<br>");
+// document.write(parseInt("50.2")+"<br>");
+// document.write(parseInt("50.2")+"<br>");
+
+
+
+// Task # 8
+
+// var secretnum = 5;
+// var userinput = prompt("please enter the secret Number");
+// for (if userinput === secretnum){
+//     alert(congratulation you are winner)
+// }
+// else {
+//     alert(sorry, you didnt choose a right answer)
+// }
 
 
 
@@ -365,26 +517,68 @@
 
 
 
-
-
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-// // Task # 13
-
-// // var userAge = +prompt("Enter your age ");
-// // var Currentyear = "2020";
-// // document.write("Your age is " + userAge);
-
-// // for(var i = 2020; i <= userAge; i --){
-// //     console.log(i);
-// //     break
-// // }
-
-
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// 13. Write a program to ask the user about his age. 
+// Calculate and show his birth year in your browser. 
 
 
 
+// var dob = new Date(prompt("Enter your date of birth", "Dec 26, 2020"))
+// var b = dob.toString();
+// var years =     b.slice(11,15)
+
+// var dobmili = dob.getTime();
+// var today = new Date();
+// var todaymili = today.getTime();
+// var diff = todaymili - dobmili;
+// var accuage = Math.floor(diff/(1000*60*60*24*30*12))
+// document.write("Your age is:" + " " +accuage + "<br>" + "Your birth year is:" +years);
+
+
+
+
+
+
+
+
+
+
+// 9. Create a date object of the starting date of this Ramadan
+// and alert the number of days past since 1st Ramadan?
+//  Note: 1st Ramadan was on June 18, 2015 
+
+// var d = new Date("Jun 18, 2015");
+// var dmili = d.getTime();
+// var today = new Date();
+// var todaymili = today.getTime();
+// var diff = todaymili - dmili;
+// var ramzan = Math.floor(diff/(1000*60*60*24))
+
+// alert(ramzan + " " + "days have passed since 1st Ramzan, 2015")
+
+// 10. Write a program that displays in your browser
+// the seconds that elapsed between the reference 
+// date and the beginning of 2015. 
+
+// var d = new Date("Dec 05, 2015");
+// var dmili = d.getTime();
+
+// document.write("on reference date" + " " +  d + "," +"<br>"+  dmili + " " + "seconds had passed since beginning of 2015")
+
+// 11. Create a Date object for the current date and time.
+// Extract the hours, reset the date object an hour ahead and
+//  finally display the date object in your browser
+
+// var d = new Date();
+// var ago = d.subtract(1, "hours");
+// // var today = new Date();
+// // var todaymili = today.getTime();
+// // var diff = todaymili - dmili;
+// // var ramzan = Math.floor(diff/(1000*60*60*24))
+
+// document.write("current date:" + " " + d + " "+ "1 hour ago, it was" + " " + ago )
+
+// var d = new Date();
+// d.setFullYear(2001);
 
 
 
@@ -457,13 +651,40 @@
 
 
 
-// \\\\\\\\\\\\\\\\\\\\\\////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\//////////////////\\\\\\\\\\\
+
 
 
 // Task # 4
 
+// function calc(num1, operator, num2) {
 
-// \\\\\\\\\\\\\\\\\\\\\\////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\//////////////////\\\\\\\\\\\
+//     var num1 = prompt("Enter number first value: ");
+//     var operator = prompt("Enter number operator: ");
+//     var num2 = prompt("Enter number second value: ");
+
+//     if(operator == "+"){
+//         console.log(num1+num2);
+//     }
+//     else if(operator == "-"){
+//         alert(num1-num2);
+//     }
+//     else if(operator == "/"){
+//         alert(num1/num2);
+//     }
+//     else if(operator == "*"){
+//         alert(num1*num2);
+//     }
+//     else{
+//         alert("Invalid Input!");
+//     }
+
+
+// }
+
+// calc();
+
+
+
 
 
 
@@ -599,39 +820,85 @@
 
 
 
+
 // Task # 11
 
-// function titlecase(str) {
-//     var words = str.toLowerCase().split(" ");
-//     for (var i = 0; i < words.length; i++) {
-//         var wordsi  = str[i].ChartAt(0).toUpperCase() + words[i].slice(1);
+// function letterCapital(str) {
+//     var a = [];
+//     var sep = str.split(" ");
+
+//     for (var i=0; i < sep.length; i++){
+//         a.push(sep[i][0].toUpperCase()+sep[i].slice(1));
 //     }
-//     return words.join(" ");
+//     return a.join(" ");
 // }
 
 
-// var stringlineCharacter = titlecase("the quick brown fox");
-// console.log(stringlineCharacter)
+// var letterCapitalResult = letterCapital("the quick brown fox");
+// document.write("<h1>Task # 11</h1>")
+// document.write("EXPECTED STRING: the quick brown fox<BR>")
+// document.write("EXPECTED OUTPUT: " +" "+ letterCapitalResult);
 
 
 
 
 
+// Task # 12
+
+// function longestWord(str) {
+//     var words = str.split(" ");
+//     var size  = 0;
+//     var max   = [""];
+
+//     for (var i = 0; i < words.length; i++) {
+//         if (words[i].length >= size) {
+//             size = words[i].length;
+//             if (max[max.length - 1].length <words[i].length){
+//                 max = [];
+//                 max.push(words[i]);
+//             }
+//             else{
+//                 max = [...max,words[i]];
+//             }
+//         }
+//     }
+// return [...max];
+// }
+
+
+// document.write("<h1>Task # 12</h1>")
+// document.write("EXAMPLE STRING : Web Development Tutorial<br>");
+// document.write("EXPECTED OUTPUT : "+longestWord("Web Development Tutorial"));
 
 
 
 
 
+// Task # 13
+// document.write("<h1>Task # 13</h1>")
+
+// function occurrencesCounter(str, letter) {
+//     var stringAskingFromUser = prompt("Enter String here ");
+//     var letterAskingFromUser = [];
+    
+//     var letterCount = 0;
+
+//     for(var i = 0; i<stringAskingFromUser.length; i++){
+//         if(stringAskingFromUser.charAt(i) == letterAskingFromUser){
+//             letterAskingFromUser.push(stringAskingFromUser);
+//             letterCount++;
+//         }
+//     }
+//     document.write("Sample arguments: " + stringAskingFromUser);
+//     return letterAskingFromUser;
 
 
 
+// }
 
+// var occurenceFunctnCalled = occurrencesCounter();
 
-
-
-
-
-
+// document.write("<br>Occurence letter: " + occurenceFunctnCalled);
 
 
 
